@@ -28,8 +28,8 @@
 ## Tech Stack
 
 - **Frontend**: React Native for cross-platform mobile application development.
-- **Backend**: Node.js and Express.js for handling server-side operations.
-- **Database**: MongoDB for secure data storage.
+- **Backend**: Node.js and PHP for handling server-side operations.
+- **Database**: MySQL for secure data storage.
 - **Camera Feature**: Python-based camera integration for future medical symptoms detection functionality.
 
 ## Installation
@@ -37,7 +37,7 @@
 ### Prerequisites
 
 - Node.js
-- MongoDB
+- MySQL
 - Python (for future camera features)
 - React Native development environment
 
