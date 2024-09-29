@@ -1,6 +1,3 @@
-Here is a sample `README.md` for **ArogyamCare**:
-
-
 # ArogyamCare
 
 **ArogyamCare** is a health-focused app designed to help users find doctors, book appointments, and access local pharmacies. The app aims to streamline healthcare access, particularly in times of emergencies, offering a user-friendly platform for connecting patients with medical professionals and resources.
@@ -81,8 +78,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For any inquiries or support, please contact the developer:
 
 - **Founder & Developer**: Paragjyoti Das
-- **Email**: your-email@example.com
+- **Email**: paragjyoti43d@gmail.com
 - **Location**: Barpeta, Assam
 
 
-This `README.md` provides a comprehensive overview of the ArogyamCare project, detailing its features, tech stack, installation instructions, and upcoming developments.
