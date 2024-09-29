@@ -63,7 +63,7 @@
 
 ## Data Privacy
 
-ArogyamCare respects user privacy and ensures that all personal data is secure and used only for healthcare-related purposes. Each feature of the app is designed to safeguard sensitive health information. You can read more about our [Privacy Policy](link-to-privacy-policy).
+ArogyamCare respects user privacy and ensures that all personal data is secure and used only for healthcare-related purposes. Each feature of the app is designed to safeguard sensitive health information. You can read more about our [Privacy Policy](Privacy_Policy.md).
 
 ## Contribution
 
