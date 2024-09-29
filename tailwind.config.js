@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'playfair': ['"Playfair Display"', 'serif'],
+        'merriweather': ['"Merriweather"', 'serif'],
+        'opensans': ['"Open Sans"', 'sans-serif'],
+        'lato': ['"Lato"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
