@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Header from './components/header'
+import Hero from './components/hero'
 
 const App = () => {
   return (
-    <div className="w-full h-[100vh] bg-zinc-900 flex items-center justify-center flex-col gap-6">
-      <div className='text-cyan-100 text-6xl font-semibold'>Arogyam.com</div>
-      <h5 className='text-cyan-100 text-lg font-semibold'>Find Your Nearby Doctor and Book a Appointment just a second</h5>
-    </div>
+    <section className='w-full h-[100vh] p-7 px-20 before:!opacity-40 select-none' id='main-bg'>
+      <Header/>
+      <Hero/>
+    </section>
   )
 }
 

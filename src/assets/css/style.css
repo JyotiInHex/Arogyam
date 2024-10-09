@@ -1,0 +1,106 @@
+::selection {
+    --tw-bg-opacity: 1;
+    background-color: rgb(24 24 27 / var(--tw-bg-opacity)) /* #18181b */;
+    --tw-text-opacity: 1;
+    color: rgb(244 244 245 / var(--tw-text-opacity)) /* #f4f4f5 */;
+}
+html{
+  width: 100%;
+  height: auto;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 5px;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgb(46, 46, 46);
+}
+
+#main-bg{
+    position: relative;
+    background-color: #ffffff;
+    z-index: 0;
+    min-height: 100vh;
+}
+#main-bg::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 20rem;
+    background-color: #4bb092;
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+.navLinks{
+    position: relative;
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(158 158 150 / var(--tw-text-opacity)) /* #18181b */;
+    padding: 0.15rem 1rem;
+    cursor: pointer;
+    transition: color 0.14s ease-in-out;
+}
+.navLinks::after{
+    content: '';
+    position: absolute;
+    bottom: -1%;
+    left: 50%;
+    transform: translate(-50%, 1%);
+    width: 4px;
+    height: 4px;
+    background-color: #4bb092;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.14s ease-in-out, visibility 0.14s ease-in-out;
+
+}
+.navLinks.navActive,
+.navLinks.navActive::after{
+    color: #4bb092;
+    opacity: 1;
+    visibility: visible;
+}
+button[type='button']{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 0.85s ease-in-out;
+}
+button[type='button']::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -100%;
+    transform: translate(-50%, 50%);
+    width: 12rem;
+    height: 40px;
+    background: #18181b;
+    border-radius: 50%;
+    z-index: -1;
+    transition: bottom 0.4s ease-in-out, border-radius 0.2s ease-in-out;
+    pointer-events: none;
+}
+button[type='button']:hover{color: #ffffff;}
+button[type='button']:hover::after{
+    bottom: 50%;
+    border-radius: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
