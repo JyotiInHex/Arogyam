@@ -29,17 +29,33 @@ html::-webkit-scrollbar-thumb {
 #main-bg::before{
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 10em;
+    right: 0em;
     width: 20rem;
     height: 20rem;
     background-color: #4bb092;
-    filter: blur(100px);
+    filter: blur(70px);
     pointer-events: none;
     z-index: -1;
     border-radius: 50%;
-    opacity: 0.5;
+    opacity: 0.3;
 }
+
+#main-bg::after{
+    content: '';
+    position: absolute;
+    bottom: 0em;
+    left: 0em;
+    width: 20rem;
+    height: 20rem;
+    background-color: #4bb092;
+    filter: blur(70px);
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
 .navLinks{
     position: relative;
     font-size: 1.125rem /* 18px */;
@@ -85,8 +101,8 @@ button[type='button']::after{
     left: 50%;
     bottom: -100%;
     transform: translate(-50%, 50%);
-    width: 12rem;
-    height: 40px;
+    width: 15rem;
+    height: 50px;
     background: #18181b;
     border-radius: 50%;
     z-index: -1;
@@ -104,3 +120,32 @@ input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.progressSteps :where(.progressLine:nth-child(1)){display: none;}
+
+.whyDifferent :where(li:last-child){border: none !important;}
+
+.applyListStyle{
+    margin-top: 0.5rem;
+    position: relative;
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    --tw-text-opacity: 1;
+    background-color: rgb(24 24 27 / var(--tw-text-opacity)) /* #18181b */;
+    border-radius: 50%;
+}
+.applyListStyle::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.15rem;
+    height: 1.15rem;
+    --tw-text-opacity: 0.2;
+    background-color: rgb(24 24 27 / var(--tw-text-opacity)) /* #18181b */;
+    border-radius: 50%;
+}
+
+.listColumn{column-count: 3;}
