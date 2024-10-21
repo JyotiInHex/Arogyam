@@ -1,6 +1,6 @@
 import React from "react";
 import appHome from "../assets/images/mockrocket-capture.png";
-import { benefitsList } from "../data/pageData";
+import { benefitsList } from "../data/UIData";
 
 const Benefits = () => {
   return (

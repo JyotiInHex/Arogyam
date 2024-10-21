@@ -1,5 +1,5 @@
 import React from "react";
-import { differentList } from "../data/pageData";
+import { differentList } from "../data/UIData";
 import AppRecord from './AppRecord';
 
 

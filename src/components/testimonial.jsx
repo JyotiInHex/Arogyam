@@ -3,7 +3,7 @@ import { FiUser } from "react-icons/fi";
 import { BsStar } from "react-icons/bs";
 import { BsStarFill } from "react-icons/bs";
 import { BsStarHalf } from "react-icons/bs";
-import { testimonials } from "../data/pageData";
+import { testimonials } from "../data/UIData";
 
 const Testimonial = () => {
   const detectLanguage = (text) => {

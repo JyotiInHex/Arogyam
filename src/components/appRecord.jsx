@@ -1,5 +1,5 @@
 import React from "react";
-import { appRecordList } from "../data/pageData";
+import { appRecordList } from "../data/UIData";
 
 const AppRecord = () => {
   return (

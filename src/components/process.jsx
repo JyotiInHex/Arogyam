@@ -1,5 +1,5 @@
 import React from "react";
-import { processList } from "../data/pageData";
+import { processList } from "../data/UIData";
 
 const Process = () => {
   return (

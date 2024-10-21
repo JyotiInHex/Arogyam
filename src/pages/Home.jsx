@@ -2,15 +2,15 @@ import React, { useContext, useState } from "react";
 import appProfile from "../assets/images/Multiscreens iPhones.png";
 import { FiPhone } from "react-icons/fi";
 import { FormContext } from "../context/FormContext";
-import Process from "./Process";
-import Benefits from "./Benefits";
-import Different from "./Different";
-import Features from "./Features";
-import Testimonial from "./Testimonial";
-import GetStarted from "./GetStarted";
+import Process from "../components/Process";
+import Benefits from "../components/Benefits";
+import Different from "../components/Different";
+import Features from "../components/Features";
+import Testimonial from "../components/Testimonial";
+import GetStarted from "../components/GetStarted";
 
 
-const Hero = () => {
+const Home = () => {
   const { formData, setFormData, handleFormData } = useContext(FormContext);
 
   const handleChange = (e) => {
@@ -110,4 +110,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;

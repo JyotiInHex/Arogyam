@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import Header from "./components/Header";
-import Hero from "./components/hero";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 import About from "./pages/about";
 import Footer from "./components/footer";
 import Lenis from "lenis";
@@ -26,9 +26,9 @@ const App = () => {
     <BrowserRouter>
       <React.Fragment>
         <section id="main-bg" className="select-none before:!opacity-40">
-          <Header />
+          <Navbar />
           <Routes>
-            <Route path="/" element={<Hero />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             {/* <Route path="/features" element={<About />} />
             <Route path="/contact" element={<About />} /> */}

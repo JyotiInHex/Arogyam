@@ -2,7 +2,7 @@ import React from "react";
 import logo from "/icon/logo-svg.svg";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+const Navbar = () => {
   return (
     <header className="p-7 px-20">
       <nav className="flex justify-between items-center">
@@ -53,4 +53,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
