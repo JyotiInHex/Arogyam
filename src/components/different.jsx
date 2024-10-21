@@ -1,11 +1,12 @@
 import React from "react";
 import { differentList } from "../data/pageData";
+import AppRecord from './AppRecord';
 
 
 const Different = () => {
   return (
     <section
-      aria-label="Process Section"
+      aria-label="Different Section"
       className="mt-[7.5rem] flex flex-col items-center justify-items-center w-full h-auto "
     >
       <div className="px-10 flex flex-col w-full h-auto">
@@ -23,6 +24,7 @@ const Different = () => {
               required!
             </p>
           </div>
+          <AppRecord/>
         </div>
         <ol className="mt-10 px-[3rem] w-full h-auto flex items-start whyDifferent">
           {differentList.slice(0, 3).map((data, index) => {

@@ -1,14 +1,43 @@
-import React, { useState } from 'react'
-import Header from './components/header'
-import Hero from './components/hero'
+import React, { useEffect } from "react";
+import Header from "./components/Header";
+import Hero from "./components/hero";
+import About from "./pages/about";
+import Footer from "./components/footer";
+import Lenis from "lenis";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
-  return (
-    <section className='w-full h-auto p-7 px-20 before:!opacity-40 select-none' id='main-bg'>
-      <Header/>
-      <Hero/>
-    </section>
-  )
-}
+  useEffect(() => {
+    const lenis = new Lenis();
 
-export default App
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  return (
+    <BrowserRouter>
+      <React.Fragment>
+        <section id="main-bg" className="select-none before:!opacity-40">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Hero />} />
+            <Route path="/about" element={<About />} />
+            {/* <Route path="/features" element={<About />} />
+            <Route path="/contact" element={<About />} /> */}
+          </Routes>
+          <Footer />
+        </section>
+      </React.Fragment>
+    </BrowserRouter>
+  );
+};
+
+export default App;

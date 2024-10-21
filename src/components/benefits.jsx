@@ -5,7 +5,7 @@ import { benefitsList } from "../data/pageData";
 const Benefits = () => {
   return (
     <section
-      aria-label="Process Section"
+      aria-label="Benefits Section"
       className="mt-[11.5rem] flex flex-col items-center justify-items-center w-full h-auto"
     >
       <div className="px-10 flex w-full h-auto">

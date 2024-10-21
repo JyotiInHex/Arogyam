@@ -11,6 +11,7 @@ export default {
         'playfair': ['"Playfair Display"', 'serif'],
         'merriweather': ['"Merriweather"', 'serif'],
         'opensans': ['"Open Sans"', 'sans-serif'],
+        'native': ['"Tiro Bangla"', 'serif']
       },
     },
   },
