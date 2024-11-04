@@ -1,6 +1,7 @@
 import React from "react";
 import { BiLogoFacebook } from "react-icons/bi";
 import { FaXTwitter } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -30,40 +31,40 @@ const Footer = () => {
               <h2 className="text-2xl font-poppins font-semibold mb-3">
                 Quick Links
               </h2>
-              <li className="text-base font-poppins font-normal">Home</li>
-              <li className="text-base font-poppins font-normal">About Us</li>
-              <li className="text-base font-poppins font-normal">Features</li>
-              <li className="text-base font-poppins font-normal">Contact Us</li>
+              <NavLink to="/" className="text-base font-poppins font-normal">Home</NavLink>
+              <NavLink to="/about" className="text-base font-poppins font-normal">About Us</NavLink>
+              <NavLink to="/features" className="text-base font-poppins font-normal">Features</NavLink>
+              <NavLink to="/contact" className="text-base font-poppins font-normal">Contact Us</NavLink>
             </ul>
             <ul className="text-zinc-100 flex flex-col gap-1">
               <h2 className="text-2xl font-poppins font-semibold mb-3">
                 Explore More
               </h2>
-              <li className="text-base font-poppins font-normal">
+              <NavLink className="text-base font-poppins font-normal">
                 Find a Doctor
-              </li>
-              <li className="text-base font-poppins font-normal">
+              </NavLink>
+              <NavLink className="text-base font-poppins font-normal">
                 Book an Appointment
-              </li>
-              <li className="text-base font-poppins font-normal">
+              </NavLink>
+              <NavLink className="text-base font-poppins font-normal">
                 Pharmacy Search
-              </li>
-              <li className="text-base font-poppins font-normal">
+              </NavLink>
+              <NavLink className="text-base font-poppins font-normal">
                 Emergency Services
-              </li>
+              </NavLink>
             </ul>
           </div>
         </div>
         <hr className="border border-solid border-zinc-700 rounded-full mt-10" />
         <div className="text-zinc-100 flex items-start justify-between mt-7">
           <ul className="flex items-center gap-5">
-            <li className="text-base font-poppins font-normal">
+            <NavLink to="/privacyPolicy" className="text-base font-poppins font-normal">
               Privacy Policy
-            </li>
-            <li className="text-base font-poppins font-normal">
+            </NavLink>
+            <NavLink to="/termsAndCondition" className="text-base font-poppins font-normal">
               Terms & Conditions
-            </li>
-            <li className="text-base font-poppins font-normal">Help Center</li>
+            </NavLink>
+            <NavLink to="/helpCenter" className="text-base font-poppins font-normal">Help Center</NavLink>
           </ul>
           <div>
             <h5 className="text-base font-poppins font-normal">

@@ -1,8 +1,11 @@
 import React from 'react'
+import PageTitle from '../components/PageTitle'
 
 const About = () => {
   return (
-    <div>About</div>
+    <React.Fragment>
+      <PageTitle/>
+    </React.Fragment>
   )
 }
 

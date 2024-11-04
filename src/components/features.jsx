@@ -1,7 +1,104 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
 import { featuresList } from "../data/UIData";
 
 const Features = () => {
+  const sectionTitleRef = useRef(null);
+  const titleRef = useRef(null);
+  const subTitleRef = useRef(null);
+  const listPointsRef = useRef([]);
+
+  const addToRef = (el) => {
+    if (el && !listPointsRef.current.includes(el)) {
+      listPointsRef.current.push(el);
+    }
+  };
+
+  useEffect(() => {
+    gsap.fromTo(
+      sectionTitleRef.current,
+      { y: -50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionTitleRef.current,
+          start: "top 80%",
+          end: "top 50%",
+          scrub: true,
+        },
+      }
+    ); // section title
+
+    gsap.fromTo(
+      titleRef.current,
+      {
+        x: -50,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionTitleRef.current,
+          start: "bottom 80%",
+          end: "bottom 50%",
+          scrub: true,
+        },
+      },
+      "a"
+    ); // title
+
+    gsap.fromTo(
+      subTitleRef.current,
+      {
+        x: 50,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionTitleRef.current,
+          start: "bottom 80%",
+          end: "bottom 50%",
+          scrub: true,
+        },
+      },
+      "a"
+    ); // subtitle
+
+    listPointsRef.current.forEach((item, index) => {
+      gsap.fromTo(
+        item,
+        {
+          x: (index % 2 === 0 ? -50 : 50),
+          opacity: 0,
+          scale: 0.8,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            end: "top 50%",
+            scrub: true,
+          },
+        }
+      );
+    });
+  });
+
   return (
     <section
       aria-label="Features Section"
@@ -9,14 +106,23 @@ const Features = () => {
     >
       <div className="px-10 flex flex-col w-full h-auto  pb-20">
         <div className="px-20 w-1/2 h-auto flex flex-col items-start ">
-          <h3 className="w-fit flex items-center justify-center text-lg font-opensans font-semibold text-zinc-900">
+          <h3
+            ref={sectionTitleRef}
+            className="w-fit flex items-center justify-center text-lg font-opensans font-semibold text-zinc-900"
+          >
             <hr className="w-4 h-[0.20rem] bg-zinc-900 mr-2" />
             Features
           </h3>
-          <h2 className="mt-3 text-[2.5rem] font-merriweather text-zinc-900">
+          <h2
+            ref={titleRef}
+            className="mt-3 text-[2.5rem] font-merriweather text-zinc-900"
+          >
             What do you get.
           </h2>
-          <p className="text-lg text-zinc-900 font-poppins font-normal">
+          <p
+            ref={subTitleRef}
+            className="text-lg text-zinc-900 font-poppins font-normal"
+          >
             Powerful Features at Your Fingertips
           </p>
         </div>
@@ -24,7 +130,11 @@ const Features = () => {
           {featuresList.map((data, index) => {
             return (
               <React.Fragment key={index}>
-                <li className="px-5 m-2 w-full grid grid-cols-[auto_1fr] items-center gap-x-3 gap-y-2">
+                <li
+                  ref={addToRef}
+                  className="px-5 m-2 w-full grid grid-cols-[auto_1fr] items-center gap-x-3 gap-y-2"
+                  id={`featuresPoint-${index}`}
+                >
                   <h3 className="w-4 h-4 p-4 flex items-center justify-center rounded-full bg-zinc-700 text-base text-zinc-50 font-poppins font-semibold">
                     {data.slNo}
                   </h3>

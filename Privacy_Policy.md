@@ -2,7 +2,7 @@
 
 **Last Updated: September 29, 2024**
 
-ArogyamCare is committed to protecting your privacy. This Privacy Policy explains how your personal data is collected, used, and disclosed by ArogyamCare when you use our mobile application and related services.
+Arogyam is committed to protecting your privacy. This Privacy Policy explains how your personal data is collected, used, and disclosed by Arogyam when you use our mobile application and related services.
 
 ## 1. Information We Collect
 
@@ -11,7 +11,7 @@ We may collect the following types of information:
 - **Personal Information**: This includes your name, email address, phone number, and other contact details you provide when registering for an account.
 - **Medical Information**: This may include doctor appointments, prescriptions, and other health-related information.
 - **Location Information**: We may collect your location to help you find nearby doctors and pharmacies.
-- **Device Information**: Information about the device and operating system you use to access ArogyamCare.
+- **Device Information**: Information about the device and operating system you use to access Arogyam.
 
 ## 2. How We Use Your Information
 

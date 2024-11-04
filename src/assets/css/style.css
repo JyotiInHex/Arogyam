@@ -4,25 +4,25 @@
   --tw-text-opacity: 1;
   color: rgb(244 244 245 / var(--tw-text-opacity)) /* #f4f4f5 */;
 }
+
+
 html {
   width: 100%;
   height: auto;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-
 html::-webkit-scrollbar {
   width: 5px;
 }
-
 html::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: rgb(46, 46, 46);
 }
-
 input {
   background-color: transparent !important;
 }
+
 
 #main-bg {
   position: relative;
@@ -30,7 +30,7 @@ input {
   z-index: 0;
   min-height: 100vh;
 }
-#main-bg::before {
+/* #main-bg::before {
   content: "";
   position: absolute;
   top: 10em;
@@ -43,9 +43,8 @@ input {
   z-index: -1;
   border-radius: 50%;
   opacity: 0.3;
-}
-
-#main-bg::after {
+} */
+/* #main-bg::after {
   content: "";
   position: absolute;
   bottom: 0em;
@@ -58,7 +57,8 @@ input {
   z-index: -1;
   border-radius: 50%;
   opacity: 0.3;
-}
+} */
+
 
 .navLinks {
   position: relative;
@@ -66,10 +66,13 @@ input {
   line-height: 1.75rem /* 28px */;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
+  text-transform: capitalize;
   --tw-text-opacity: 1;
   color: rgb(158 158 150 / var(--tw-text-opacity)) /* #18181b */;
   padding: 0.15rem 1rem;
   cursor: pointer;
+  transform: translateY(-2rem);
+  opacity: 0;
   transition: color 0.14s ease-in-out;
 }
 .navLinks::after {
@@ -86,12 +89,19 @@ input {
   visibility: hidden;
   transition: opacity 0.14s ease-in-out, visibility 0.14s ease-in-out;
 }
-.navLinks.navActive,
-.navLinks.navActive::after {
+.navLinks.navActive {
   color: #4bb092;
+}
+.navLinks.navActive::after {
   opacity: 1;
   visibility: visible;
 }
+.joinLinks :where(a:last-child){
+  background-color: #18181b;
+  color: #f0f4f8 !important;
+}
+
+
 button[type="button"] {
   position: relative;
   z-index: 1;
@@ -105,11 +115,11 @@ button[type="button"]::after {
   bottom: -100%;
   transform: translate(-50%, 50%);
   width: inherit;
-  height: 55px;
+  height: 85px;
   background: #18181b;
   border-radius: 50%;
   z-index: -1;
-  transition: bottom 0.6s ease-in-out, border-radius 0.65s ease-in-out;
+  transition: bottom 0.6s ease-in-out, border-radius 0.95s ease-in-out;
   pointer-events: none;
 }
 button[type="button"]:hover {
@@ -119,20 +129,22 @@ button[type="button"]:hover::after {
   bottom: 50%;
   border-radius: 0;
 }
-
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+
 .progressSteps :where(.progressLine:nth-child(1)) {
   display: none;
 }
 
+
 .whyDifferent :where(li:last-child) {
   border: none !important;
 }
+
 
 .applyListStyle {
   margin-top: 0.5rem;
@@ -157,11 +169,38 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 50%;
 }
 
+
 .listColumn {
   columns: 250px;
 }
-
 .listColumn :where(div:nth-child(1)) {
   margin-top: 0 !important;
 }
 
+
+.buttonEffect{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  transition: color 0.7s ease-in-out;
+}
+.buttonEffect::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4.5rem;
+  width: inherit;
+  height: 3.5rem;
+  background-color: #18181b;
+  border-radius: 50%;
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+  transition: bottom 0.7s ease-in-out, border-radius 0.85s ease-in-out;
+}
+.buttonEffect:hover{color: #f0f4f8;}
+.buttonEffect:hover::after{
+  bottom: -0.5rem;
+  border-radius: 0;
+}
