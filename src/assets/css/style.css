@@ -26,39 +26,11 @@ input {
 
 #main-bg {
   position: relative;
-  background-color: #f0f4f8;
+  background-color: #ffffff;
   z-index: 0;
   min-height: 100vh;
+  padding: 7vh 8vw;
 }
-/* #main-bg::before {
-  content: "";
-  position: absolute;
-  top: 10em;
-  right: 0em;
-  width: 20rem;
-  height: 20rem;
-  background-color: #4bb092;
-  filter: blur(70px);
-  pointer-events: none;
-  z-index: -1;
-  border-radius: 50%;
-  opacity: 0.3;
-} */
-/* #main-bg::after {
-  content: "";
-  position: absolute;
-  bottom: 0em;
-  left: 0em;
-  width: 20rem;
-  height: 20rem;
-  background-color: #4bb092;
-  filter: blur(70px);
-  pointer-events: none;
-  z-index: -1;
-  border-radius: 50%;
-  opacity: 0.3;
-} */
-
 
 .navLinks {
   position: relative;
