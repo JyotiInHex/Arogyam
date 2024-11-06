@@ -1,6 +1,6 @@
-# ArogyamCare
+# Arogyam
 
-**ArogyamCare** is a health-focused app designed to help users find doctors, book appointments, and access local pharmacies. The app aims to streamline healthcare access, particularly in times of emergencies, offering a user-friendly platform for connecting patients with medical professionals and resources.
+**Arogyam** is a health-focused app designed to help users find doctors, book appointments, and access local pharmacies. The app aims to streamline healthcare access, particularly in times of emergencies, offering a user-friendly platform for connecting patients with medical professionals and resources.
 
 ## Features
 
@@ -45,7 +45,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/arogyamcare.git
+   git clone https://github.com/yourusername/Arogyam.git
    ```
 2. Install dependencies:
    ```bash
@@ -63,11 +63,11 @@
 
 ## Data Privacy
 
-ArogyamCare respects user privacy and ensures that all personal data is secure and used only for healthcare-related purposes. Each feature of the app is designed to safeguard sensitive health information. You can read more about our [Privacy Policy](Privacy_Policy.md).
+Arogyam respects user privacy and ensures that all personal data is secure and used only for healthcare-related purposes. Each feature of the app is designed to safeguard sensitive health information. You can read more about our [Privacy Policy](Privacy_Policy.md).
 
 ## Contribution
 
-We welcome contributions to improve ArogyamCare. If you'd like to contribute, please fork the repository and submit a pull request.
+We welcome contributions to improve Arogyam. If you'd like to contribute, please fork the repository and submit a pull request.
 
 ## License
 
