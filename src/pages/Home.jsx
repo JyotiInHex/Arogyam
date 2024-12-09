@@ -1,12 +1,13 @@
-import React from 'react'
-import Landing from '../components/Landing'
+import React from "react";
+import LOGO from "../assets/images/logo-svg.svg";
+import Header from "../components/Header";
 
 const Home = () => {
   return (
-    <section>
-      <Landing/>
+    <section className="w-full h-auto">
+      <Header/>
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
