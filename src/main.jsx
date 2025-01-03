@@ -1,14 +1,14 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import { FromProvider } from "./context/FormContext.jsx";
+// import { FromProvider } from "./context/FormContext.js";
 import "./index.css";
 import "lenis/dist/lenis.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <FromProvider>
+    {/* <FromProvider> */}
       <App />
-    </FromProvider>
+    {/* </FromProvider> */}
   </StrictMode>
 );

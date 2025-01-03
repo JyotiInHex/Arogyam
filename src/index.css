@@ -2,4 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+.action-btns :where(li:first-child){
+    background-color: transparent;
+    border: 2px solid #fe7f18;
+}
 
+.action-btns :where(li:first-child > button){
+    color: #fe7f18;
+}
+
+.btn-hover-animation{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.btn-hover-animation:first-child:after{
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transform: translate(0%, 10%);
+    width: 100%;
+    height: 100%;
+    background: #fe7f18;
+    pointer-events: none;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out, border-radius 0.5s ease-in-out;
+}
+.btn-hover-animation:first-child:hover > button,
+.btn-hover-animation:hover::after{
+    bottom: 0;
+    transform: translate(0,0);
+    z-index: -1;
+    border-radius: 0;
+    color: #fff;
+}

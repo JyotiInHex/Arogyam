@@ -5,6 +5,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Home from "./pages/Home";
+import Header from "./components/header/Header";
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
@@ -28,15 +31,17 @@ const App = () => {
   return (
     <BrowserRouter>
       <React.Fragment>
-        <section id="main-bg" className="select-none before:!opacity-40 ">
-          {/* <Navbar timeline={timeline.current} /> */}
+        <main id="main-bg"  className="bg-blue-50 px-14 py-8 select-none before:!opacity-40 ">
+          <Header/>
           <Routes>
-            <Route path="/" element={<Home timeline={timeline.current} />} />
+            <Route path="/" element={<Home/>} />
           </Routes>
-          {/* <Footer /> */}
-        </section>
+        </main>
       </React.Fragment>
     </BrowserRouter>
+    // {/* #fe7f18 */}
+    // {/* #435a65 */}
+    // {/* #263238 */}
   );
 };
 

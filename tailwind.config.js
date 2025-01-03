@@ -7,11 +7,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'poppins': ['"Poppins"', 'serif'],
-        'playfair': ['"Playfair Display"', 'serif'],
-        'merriweather': ['"Merriweather"', 'serif'],
-        'opensans': ['"Open Sans"', 'sans-serif'],
-        'native': ['"Tiro Bangla"', 'serif']
+        lato: ['Lato', 'sans'],
+        montserrat: ['Montserrat', 'sans'],
+        notoSerifBengali: ['"Noto Serif Bengali"'],
+        notoSerifDevanagari: ['"Noto Serif Devanagari"', 'serif'],
+        poppins: ['Poppins', 'sans'],
+        roboto: ['Roboto', 'sans'],
+      },
+      backgroundImage: {
+        'hero-pattern': "url('/bg-main.jpg')",
+        // 'footer-texture': "url('/images/footer-texture.png')",
       },
     },
   },
