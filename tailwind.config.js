@@ -12,6 +12,7 @@ export default {
         notoSerifBengali: ['"Noto Serif Bengali"'],
         notoSerifDevanagari: ['"Noto Serif Devanagari"', 'serif'],
         poppins: ['Poppins', 'sans'],
+        playfair: ['Playfair Display', 'sans'],
         roboto: ['Roboto', 'sans'],
       },
       backgroundImage: {
