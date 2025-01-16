@@ -2,6 +2,8 @@ import React from "react";
 import VisualData from "../components/contents/VisualData";
 import StepsData from "../components/contents/StepsData";
 import WhyUsData from "../components/contents/WhyUsData";
+import StandOutData from "../components/contents/StandOutData";
+import Testimonial from "../components/contents/Testimonial";
 
 const Home = () => {
   return (
@@ -69,6 +71,8 @@ const Home = () => {
         <StepsData />
       </section>
       <WhyUsData />
+      <StandOutData/>
+      <Testimonial/>
     </React.Fragment>
   );
 };

@@ -18,7 +18,7 @@ const WhyUsData = () => {
             Why Choose Us?
           </h3>
           <h2 className="text-4xl text-[#435a65] font-poppins font-semibold   ">
-            Empowering Your Journey to Holistic Health and Wellness
+            Empowering Your Journey to Holistic Health and Wellness.
           </h2>
           <h5 className="text-xl text-[#263238] font-montserrat font-medium">
             Experience the Perfect Blend of Expertise, Technology, and Care.
