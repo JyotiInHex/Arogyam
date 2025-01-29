@@ -2,26 +2,25 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo_img from "/logo-svg.svg";
 
-const Header = () => {
+const Header = ({onActionBtnClick}) => {
   const navLinks = [
     { name: "About", path: "/about" },
     { name: "Features", path: "/features" },
     { name: "Contact", path: "/contact" },
   ];
   const actionLinks = [
-    { name: "Sign up", action: "sign-up-form" },
-    { name: "Sign in", action: "sign-in-form" },
+    { name: "Sign up", action: "showSignupFrom" },
+    { name: "Sign in", action: "showLoginFrom" },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleOpenMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    console.log(!isMenuOpen);
   };
 
   return (
     <>
-      <header className="fixed md:static left-0 top-0 mb-10 p-7 md:px-14 md:py-0 bg-blue-50 flex flex-col md:flex-row md:justify-between w-full h-auto z-50">
+      <header className="header fixed md:static left-0 top-0 mb-10 p-7 md:px-14 md:py-0 bg-blue-50 flex flex-col md:flex-row md:justify-between w-full h-auto z-50">
         <div className="flex items-center justify-between w-full md:w-auto">
           <div className="flex items-center gap-1">
             <figure>
@@ -42,7 +41,7 @@ const Header = () => {
           </button>
         </div>
         <div
-          className={`md:p-0 w-full md:w-[60%] md:h-full overflow-hidden bg-blue-50 flex flex-col md:flex-row md:justify-between items-center gap-5 md:gap-0 transition-all duration-700 ease-in-out ${
+          className={`md:p-0 w-full md:w-[60%] md:h-full overflow-hidden bg-blue-50 flex flex-col md:flex-row md:justify-between items-start md:items-center gap-5 md:gap-0 transition-all duration-700 ease-in-out ${
             isMenuOpen ? "max-h-[100vh] min-h-[100vh] " : "max-h-0 md:max-h-max min-h-0 md:min-h-min"
           }`}
           style={{ height: isMenuOpen ? "100%" : "0" }}
@@ -68,16 +67,18 @@ const Header = () => {
               })}
             </ul>
           </nav>
-          <ul className="md:mt-0 flex gap-7 action-btns">
+          <ul className="md:mt-0 w-full md:w-fit flex flex-col md:flex-row items-start gap-7 action-btns">
             {actionLinks.map((links, i) => {
               return (
                 <li
                   key={i}
-                  className="btn-hover-animation px-5 py-[0.4rem] rounded-md "
+                  className="btn-hover-animation px-5 py-[0.4rem] rounded-md"
                 >
                   <button
                     className="capitalize text-xl md:text-base text-[#435a65] font-normal font-poppins"
                     type="button"
+                    value={links.action}
+                    onClick={onActionBtnClick}
                   >
                     {links.name}
                   </button>
@@ -86,9 +87,9 @@ const Header = () => {
             })}
           </ul>
 
-          <caption className="text-base font-lato font-medium text-[#263238] md:hidden">
+          <span className="w-full text-base text-center font-poppins font-medium text-[#263238] md:hidden">
             Made with ❤ for Barpeta, Assam
-          </caption>
+          </span>
         </div>
       </header>
     </>

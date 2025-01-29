@@ -4,6 +4,7 @@ import StepsData from "../components/contents/StepsData";
 import WhyUsData from "../components/contents/WhyUsData";
 import StandOutData from "../components/contents/StandOutData";
 import Testimonial from "../components/contents/Testimonial";
+import GetStarted from "../components/contents/GetStarted";
 
 const Home = () => {
   return (
@@ -73,6 +74,7 @@ const Home = () => {
       <WhyUsData />
       <StandOutData/>
       <Testimonial/>
+      <GetStarted/>
     </React.Fragment>
   );
 };

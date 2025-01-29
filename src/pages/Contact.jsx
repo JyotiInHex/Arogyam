@@ -1,12 +1,9 @@
 import React from 'react'
-import PageTitle from '../components/PageTitle'
 
-const About = () => {
+const Contact = () => {
   return (
-    <React.Fragment>
-      <PageTitle/>
-    </React.Fragment>
+    <div>Contact</div>
   )
 }
 
-export default About
+export default Contact

@@ -1,5 +1,5 @@
 import React from "react";
-import Odometer from "../odometer/odometer";
+import Odometer from "../odometer/Odometer";
 
 const VisualData = () => {
   const visualData = [
@@ -27,7 +27,7 @@ const VisualData = () => {
       <ul className="w-full h-auto grid md:grid-cols-3 gap-10 p-5">
         {visualData.map((d, i) => {
           return (
-            <li className="w-full flex flex-col items-center justify-center ">
+            <li key={i} className="w-full flex flex-col items-center justify-center ">
               <h2 className="flex items-center gap-2 font-semibold font-poppins text-5xl text-blue-50">
                 <Odometer number={`${d.value}`.padStart(2, "0")} />
                 {d.suffix}

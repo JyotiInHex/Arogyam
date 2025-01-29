@@ -9,8 +9,8 @@ export default {
       fontFamily: {
         lato: ['Lato', 'sans'],
         montserrat: ['Montserrat', 'sans'],
-        notoSerifBengali: ['"Noto Serif Bengali"'],
-        notoSerifDevanagari: ['"Noto Serif Devanagari"', 'serif'],
+        notoSerifBengali: ['Noto Serif Bengali', 'serif'],
+        notoSerifDevanagari: ['Noto Serif Devanagari', 'serif'],
         poppins: ['Poppins', 'sans'],
         playfair: ['Playfair Display', 'sans'],
         roboto: ['Roboto', 'sans'],

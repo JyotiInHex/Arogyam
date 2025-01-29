@@ -61,3 +61,74 @@ html::-webkit-scrollbar-thumb {
 .steps_Container :where(.step_Cards:nth-child(2)){
   background-color: #fe7f180f;
 }
+
+.animate{
+  opacity: 0;
+  transform: translateX(100%);
+  animation-name: fade-in;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+.animate.slide-in-left{
+  animation-name: slide-in-left;
+  animation-fill-mode: forwards;
+}
+
+.animate.slide-in-right{
+  animation-name: slide-in-right;
+  animation-fill-mode: forwards;
+}
+
+.animate.slideDown{
+  animation-name: slideDown;
+}
+.animate.delay_1{
+  animation-delay: 1ms;
+}
+.animate.delay_2{
+  animation-delay: 2ms;
+}
+.animate.delay_4{
+  animation-delay: 4ms;
+}
+.animate.delay_6{
+  animation-delay: 6ms;
+}
+.animate.delay_8{
+  animation-delay: 8ms;
+}
+.animate.delay_10{
+  animation-delay: 10ms;
+}
+.animate.delay_12{
+  animation-delay: 12ms;
+}
+
+@keyframes slide-in-left{
+  from{
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right{
+  from{
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in{
+  to{
+    opacity: 1;
+  }
+}
