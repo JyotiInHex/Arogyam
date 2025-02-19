@@ -3,6 +3,7 @@ import Lenis from "lenis";
 import { gsap } from "gsap";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useForm } from "./context/FormContext";
 import Header from "./components/header/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,9 +11,23 @@ import Features from "./pages/Features";
 import Contact from "./pages/Contact";
 import Footer from "./components/footer/Footer";
 import Login from "./auth/Login";
+import Signup from "./auth/Signup";
+import ForgotPassword from "./auth/ForgotPassword";
+import { Flip, toast, ToastContainer } from "react-toastify";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const toastOptions = {
+  position: "top-right",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "dark",
+  transition: Flip,
+};
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis();
@@ -32,39 +47,37 @@ const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
   const [showForgotPass, setForgotPass] = useState(false);
+  const { resetForm, setFormType } = useForm();
 
   const handleCTAResponse = (e) => {
     const fromID = e.target.value;
-   
+    toast.dismiss();
+    resetForm();
+
     switch (fromID) {
       case "showLoginFrom":
         setShowLogin(true);
+        setShowSignup(false);
         setForgotPass(false);
+        setFormType("Login");
         break;
-      case "hideLoginFrom":
-        setShowLogin(false);
-        break;
-
 
       case "showSignupFrom":
         setShowLogin(false);
         setShowSignup(true);
+        setFormType("Signup");
         break;
-      case "hideSignupFrom":
-        setShowSignup(false);
-        break;
-
 
       case "showForgotPass":
         setForgotPass(true);
         setShowLogin(false);
+        setFormType("ForgotPassword");
         break;
-      case "showForgotPass":
-        setForgotPass(false);
-        break;
-
 
       default:
+        setShowLogin(false);
+        setShowSignup(false);
+        setForgotPass(false);
         break;
     }
   };
@@ -85,7 +98,12 @@ const App = () => {
           </Routes>
           <Footer />
 
-          {showLogin && <Login onActionBtnClick={handleCTAResponse}/>}
+          {showLogin && <Login onActionBtnClick={handleCTAResponse} />}
+          {showSignup && <Signup onActionBtnClick={handleCTAResponse} />}
+          {showForgotPass && (
+            <ForgotPassword onActionBtnClick={handleCTAResponse} />
+          )}
+          <ToastContainer {...toastOptions} />
         </main>
       </React.Fragment>
     </BrowserRouter>

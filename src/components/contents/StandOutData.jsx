@@ -65,7 +65,7 @@ const StandOutData = () => {
                 })}
               </ul>
               <figure className="absolute right-0 bottom-0 -z-[1] opacity-40 md:opacity-60 select-none pointer-events-none blur-[1px] md:blur-none">
-                <img src={d.graphicImg} alt="bg_graphic" />
+                <img src={d.graphicImg} alt="bg_graphic" loading="lazy" />
               </figure>
             </div>
           );

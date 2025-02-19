@@ -9,8 +9,8 @@ const Header = ({onActionBtnClick}) => {
     { name: "Contact", path: "/contact" },
   ];
   const actionLinks = [
-    { name: "Sign up", action: "showSignupFrom" },
     { name: "Sign in", action: "showLoginFrom" },
+    { name: "Sign up", action: "showSignupFrom" },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

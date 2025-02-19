@@ -22,12 +22,20 @@ const VisualData = () => {
   return (
     <section className="relative overflow-hidden py-9 my-24 w-full h-auto min-h-[50vh] bg-[#fe7f18] rounded-3xl flex items-center justify-center">
       <figure className="absolute -z-0 mix-blend-screen opacity-55 w-full h-auto select-none pointer-events-none">
-        <img src="/32293468_mk8.png" alt="bg_graphic"  className="w-full"/>
+        <img
+          src="/32293468_mk8.png"
+          alt="bg_graphic"
+          className="w-full"
+          loading="lazy"
+        />
       </figure>
       <ul className="w-full h-auto grid md:grid-cols-3 gap-10 p-5">
         {visualData.map((d, i) => {
           return (
-            <li key={i} className="w-full flex flex-col items-center justify-center ">
+            <li
+              key={i}
+              className="w-full flex flex-col items-center justify-center "
+            >
               <h2 className="flex items-center gap-2 font-semibold font-poppins text-5xl text-blue-50">
                 <Odometer number={`${d.value}`.padStart(2, "0")} />
                 {d.suffix}

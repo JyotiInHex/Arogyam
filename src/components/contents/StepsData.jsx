@@ -44,7 +44,7 @@ const StepsData = () => {
               className="p-10 md:pt-20 w-full h-full flex flex-col items-start justify-start gap-10 md:rounded-tl-3xl rounded-tr-3xl rounded-br-3xl md:rounded-br-none step_Cards"
             >
               <figure className="select-none pointer-events-none">
-                <img src={s.icon} alt="icon_name" width={100} />
+                <img src={s.icon} alt="icon_name" width={100} loading="lazy" />
               </figure>
               <h2 className="text-2xl text-[#263238] font-poppins font-semibold">
                 {s.name}

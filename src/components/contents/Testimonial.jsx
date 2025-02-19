@@ -81,6 +81,7 @@ const Testimonial = () => {
             src="./testimonial_character.svg"
             alt="testimonial_character"
             width={450}
+            loading="lazy"
           />
         </figure>
         <div className="relative z-0 flex flex-col items-end justify-center gap-10 w-full h-auto min-h-[45vh] overflow-hidden">

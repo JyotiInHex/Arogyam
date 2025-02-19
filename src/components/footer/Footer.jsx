@@ -112,9 +112,9 @@ const Footer = () => {
                 );
               })}
             </ul>
-            <caption className="mt-7 md:mt-0 text-base text-blue-50 font-medium font-roboto">
+            <span className="mt-7 md:mt-0 text-base text-blue-50 font-medium font-roboto">
                 Copyright &copy; {new Date().getFullYear()} Aroviya All rights reserved.
-            </caption>
+            </span>
           </div>
         </div>
       </div>

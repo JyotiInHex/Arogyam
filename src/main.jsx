@@ -9,7 +9,7 @@ import { FormProvider } from "./context/FormContext.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <FormProvider>
-      <App/>
+      <App />
     </FormProvider>
   </StrictMode>
 );

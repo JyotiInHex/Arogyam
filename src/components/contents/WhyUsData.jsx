@@ -49,7 +49,12 @@ const WhyUsData = () => {
         </ul>
       </div>
       <figure className="w-full h-auto select-none pointer-events-none">
-        <img src="/Img_Graphics_2.jpg" alt="hero_img" width={600} />
+        <img
+          src="/Img_Graphics_2.jpg"
+          alt="hero_img"
+          width={600}
+          loading="lazy"
+        />
       </figure>
     </section>
   );

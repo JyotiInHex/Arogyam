@@ -41,6 +41,7 @@ const Home = () => {
                         src="/its-free.svg"
                         alt="its_free"
                         className="absolute top-2 translate-x-[6rem] -rotate-[40deg]"
+                        loading="lazy"
                       />
                     </figure>
                   </div>

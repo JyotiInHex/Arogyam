@@ -64,7 +64,6 @@ html::-webkit-scrollbar-thumb {
 
 .animate{
   opacity: 0;
-  transform: translateX(100%);
   animation-name: fade-in;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
@@ -80,8 +79,8 @@ html::-webkit-scrollbar-thumb {
   animation-fill-mode: forwards;
 }
 
-.animate.slideDown{
-  animation-name: slideDown;
+.animate.slide-in-down{
+  animation-name: slide-in-down;
 }
 .animate.delay_1{
   animation-delay: 1ms;
@@ -127,8 +126,27 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
+@keyframes slide-in-down{
+  from{
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes fade-in{
   to{
     opacity: 1;
   }
 }
+
+.overFlow-scroll{
+  overflow-y: scroll;
+}
+.overFlow-scroll::-webkit-scrollbar{
+  width: 0;
+}
+  
