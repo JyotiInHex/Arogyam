@@ -15,7 +15,7 @@ const Home = () => {
             <div className="px-5 flex flex-col gap-5 md:gap-16">
               <div className="w-fit">
                 <h2 className="text-4xl md:text-6xl font-montserrat font-semibold text-[#435a65]  ">
-                  Your Gateway to Holistic Wellness.
+                  Your Gateway to Holistic Wellness. Parag
                 </h2>
                 <h4 className="text-lg md:text-2xl font-poppins font-medium text-[#263238] mt-7">
                   Explore personalized healthcare solutions design to empower
